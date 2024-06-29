@@ -1,5 +1,5 @@
 trigger:
-- master
+- main
 
 pool:
   vmImage: ubuntu-latest
@@ -9,5 +9,5 @@ jobs:
   container: maven:3.8.1-openjdk-17-slim
   steps:
   - script: |
-      mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevopsdevsecopsoorg -Dsonar.projectKey=azuredevsecopsoprojectkey -Dsonar.token=5646544194
+      mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=mdazuredevsecopsorg -Dsonar.projectKey=mdazuredevsecopsprojectkey -Dsonar.token=eb1afc85af663925f7975f66e79d4c8db44c45cf
     displayName: "Integrate SAST using SonarCloud to populate code coverage and secure pipeline variable in Azure DevOps DevSecOps Pipeline"
